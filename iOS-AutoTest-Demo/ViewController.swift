@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func clickLoginBtn(_ sender: Any) {
+        
+        let alert = UIAlertController()
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.accessibilityLabel = "login-alert-ok"
+        self.present(alert, animated: true, completion: nil);
+    }
+    
 
 }
 

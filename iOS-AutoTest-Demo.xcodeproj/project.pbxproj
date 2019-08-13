@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		E4C9422D23026FCC0047E698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C9422B23026FCC0047E698 /* LaunchScreen.storyboard */; };
 		E4C9423823026FCC0047E698 /* iOS_AutoTest_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C9423723026FCC0047E698 /* iOS_AutoTest_DemoTests.swift */; };
 		E4C9424323026FCC0047E698 /* iOS_AutoTest_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C9424223026FCC0047E698 /* iOS_AutoTest_DemoUITests.swift */; };
+		E4C942532302B0BA0047E698 /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C942522302B0BA0047E698 /* KIF+Extensions.swift */; };
+		E4C942592302B3D90047E698 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C942582302B3D90047E698 /* LoginTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E4C9421E23026FCC0047E698;
 			remoteInfo = "iOS-AutoTest-Demo";
+		};
+		E4C9425C2302DCB10047E698 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C9421723026FCC0047E698 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4C9423223026FCC0047E698;
+			remoteInfo = "iOS-AutoTest-DemoTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -59,6 +68,9 @@
 		E4C9423E23026FCC0047E698 /* iOS-AutoTest-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-AutoTest-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C9424223026FCC0047E698 /* iOS_AutoTest_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_AutoTest_DemoUITests.swift; sourceTree = "<group>"; };
 		E4C9424423026FCD0047E698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C942522302B0BA0047E698 /* KIF+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
+		E4C942542302B1780047E698 /* iOS-AutoTest-DemoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-AutoTest-DemoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4C942582302B3D90047E698 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,6 @@
 				D0996690BF08A59CD24078F6 /* Pods-iOS-AutoTest-DemoUITests.debug.xcconfig */,
 				11B7C6426AF519A220B5C58D /* Pods-iOS-AutoTest-DemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,6 +173,9 @@
 			children = (
 				E4C9424223026FCC0047E698 /* iOS_AutoTest_DemoUITests.swift */,
 				E4C9424423026FCD0047E698 /* Info.plist */,
+				E4C942522302B0BA0047E698 /* KIF+Extensions.swift */,
+				E4C942542302B1780047E698 /* iOS-AutoTest-DemoUITests-Bridging-Header.h */,
+				E4C942582302B3D90047E698 /* LoginTests.swift */,
 			);
 			path = "iOS-AutoTest-DemoUITests";
 			sourceTree = "<group>";
@@ -214,10 +228,12 @@
 				E4C9423A23026FCC0047E698 /* Sources */,
 				E4C9423B23026FCC0047E698 /* Frameworks */,
 				E4C9423C23026FCC0047E698 /* Resources */,
+				D667D636CFE979FA86A55118 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E4C9425D2302DCB10047E698 /* PBXTargetDependency */,
 				E4C9424023026FCC0047E698 /* PBXTargetDependency */,
 			);
 			name = "iOS-AutoTest-DemoUITests";
@@ -244,6 +260,7 @@
 					};
 					E4C9423D23026FCC0047E698 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = E4C9421E23026FCC0047E698;
 					};
 				};
@@ -362,6 +379,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D667D636CFE979FA86A55118 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-AutoTest-DemoUITests/Pods-iOS-AutoTest-DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-AutoTest-DemoUITests/Pods-iOS-AutoTest-DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-AutoTest-DemoUITests/Pods-iOS-AutoTest-DemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -386,6 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C942592302B3D90047E698 /* LoginTests.swift in Sources */,
+				E4C942532302B0BA0047E698 /* KIF+Extensions.swift in Sources */,
 				E4C9424323026FCC0047E698 /* iOS_AutoTest_DemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +438,11 @@
 			isa = PBXTargetDependency;
 			target = E4C9421E23026FCC0047E698 /* iOS-AutoTest-Demo */;
 			targetProxy = E4C9423F23026FCC0047E698 /* PBXContainerItemProxy */;
+		};
+		E4C9425D2302DCB10047E698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4C9423223026FCC0047E698 /* iOS-AutoTest-DemoTests */;
+			targetProxy = E4C9425C2302DCB10047E698 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,6 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEDD2XY992;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Pods/KIF\"";
 				INFOPLIST_FILE = "iOS-AutoTest-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,6 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -567,6 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEDD2XY992;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Pods/KIF\"";
 				INFOPLIST_FILE = "iOS-AutoTest-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -595,6 +640,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-AutoTest-Demo.app/iOS-AutoTest-Demo";
@@ -617,6 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-AutoTest-Demo.app/iOS-AutoTest-Demo";
@@ -628,6 +675,8 @@
 			baseConfigurationReference = D0996690BF08A59CD24078F6 /* Pods-iOS-AutoTest-DemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS-AutoTest-Demo.app/iOS-AutoTest-Demo";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEDD2XY992;
 				INFOPLIST_FILE = "iOS-AutoTest-DemoUITests/Info.plist";
@@ -636,8 +685,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/iOS-AutoTest-DemoUITests/iOS-AutoTest-DemoUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "iOS-AutoTest-Demo";
@@ -649,6 +701,8 @@
 			baseConfigurationReference = 11B7C6426AF519A220B5C58D /* Pods-iOS-AutoTest-DemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS-AutoTest-Demo.app/iOS-AutoTest-Demo";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEDD2XY992;
 				INFOPLIST_FILE = "iOS-AutoTest-DemoUITests/Info.plist";
@@ -657,8 +711,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LMJ.iOS-AutoTest-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/iOS-AutoTest-DemoUITests/iOS-AutoTest-DemoUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "iOS-AutoTest-Demo";
