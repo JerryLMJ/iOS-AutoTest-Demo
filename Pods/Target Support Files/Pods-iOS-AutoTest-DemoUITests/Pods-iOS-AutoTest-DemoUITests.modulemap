@@ -1,0 +1,6 @@
+framework module Pods_iOS_AutoTest_DemoUITests {
+  umbrella header "Pods-iOS-AutoTest-DemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
