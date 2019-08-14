@@ -14,5 +14,4 @@ class LoginTests : KIFTestCase {
         tester().tapView(withAccessibilityLabel: "login-btn-login")
         tester().waitForView(withAccessibilityLabel: "login-alert-ok")
     }
-    
 }
