@@ -10,14 +10,13 @@ target 'iOS-AutoTest-Demo' do
   target 'iOS-AutoTest-DemoTests' do
     inherit! :search_paths
     # Pods for testing
-
+    pod 'KIF'
+    pod 'Nimble'
   end
 
   target 'iOS-AutoTest-DemoUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'KIF'
-    pod 'Nimble'
   end
 
 end

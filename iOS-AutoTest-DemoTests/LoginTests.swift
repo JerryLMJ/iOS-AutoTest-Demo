@@ -10,8 +10,9 @@ import Foundation
 
 class LoginTests : KIFTestCase {
     
-    func testSomethingHere() {
-        tester().tapView(withAccessibilityLabel: "login-btn-login")
-        tester().waitForView(withAccessibilityLabel: "login-alert-ok")
+    func testLogin() {
+        tester().tapView(withAccessibilityLabel: "login_btn_login")
+        tester().waitForView(withAccessibilityLabel: "提示")
+        tester().tapView(withAccessibilityLabel: "ok")
     }
 }
